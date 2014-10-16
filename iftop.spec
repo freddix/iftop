@@ -1,4 +1,4 @@
-%define		pre	pre2
+%define		pre	pre4
 Summary:	Display bandwidth usage on an interface
 Name:		iftop
 Version:	1.0
@@ -6,7 +6,7 @@ Release:	0.%{pre}.1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.ex-parrot.com/~pdw/iftop/download/%{name}-%{version}%{pre}.tar.gz
-# Source0-md5:	fef521a49ec0122458d02c64212af3c5
+# Source0-md5:	7e6decb4958e8a4890cccac335239f24
 URL:		http://www.ex-parrot.com/~pdw/iftop/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,7 +24,6 @@ question "why is our ADSL link so slow?".
 %setup -q -n %{name}-%{version}%{pre}
 
 %build
-export CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses"
 %{__aclocal}
 %{__autoheader}
 %{__autoconf}
